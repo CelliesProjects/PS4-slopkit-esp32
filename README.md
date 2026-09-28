@@ -2,7 +2,10 @@
 
 A small ESP32-based local web server for hosting the **Aio Slopkit** PS4 exploit chain.
 
-The ESP32 provides a self-contained Wi-Fi access point and serves the complete Slopkit payload from LittleFS. No internet connection or separate PC/web server is required.
+The ESP32 provides a self-contained Wi-Fi access point and serves the complete Slopkit payload from LittleFS.  
+No internet connection or separate PC/web server is required.
+
+This is a PlatformIO project.
 
 ## Hardware
 
@@ -11,11 +14,11 @@ Tested with:
 * ESP32, 4 MB flash
 * LOLIN S2 Mini, 4 MB flash / 2 MB PSRAM
 
+The project uses a custom 4 MB partition table with approximately 2.75 MB available for the filesystem.
+
 The S2 Mini is currently preferred because it provides noticeably better performance when serving the payload.
 
 ## Building
-
-This is a PlatformIO project.
 
 The exploit files live in:
 
@@ -25,13 +28,19 @@ data/
 
 The filesystem is LittleFS.
 
-Build and upload the firmware using the PlatformIO controls in VS Code, then use:
+## Flashing
+
+Build and upload the firmware first using the PlatformIO controls in VS Code, then use:
+
+**PlatformIO → Build Filesystem Image**
+
+After this is done, upload the filesystem to the device:
 
 **PlatformIO → Upload Filesystem Image**
 
-to upload the contents of `data/`.
+That's it.
 
-The project uses a custom 4 MB partition table with approximately 2.75 MB available for the filesystem.
+
 
 ## Usage
 
