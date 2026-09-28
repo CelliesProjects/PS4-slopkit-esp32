@@ -1,6 +1,6 @@
 # PS4 Slopkit ESP32
 
-A small ESP32-based local web server for hosting the **Aoi Slopkit** PS4 exploit chain.
+A small ESP32-based local web server for hosting the **Aio Slopkit** PS4 exploit chain.
 
 The ESP32 provides a self-contained Wi-Fi access point and serves the complete Slopkit payload from LittleFS. No internet connection or separate PC/web server is required.
 
@@ -67,6 +67,6 @@ The contents of `data/` are kept separate from the ESP32 firmware so the hosted 
 
 ## Credits
 
-* **Aoi Slopkit** — original PS4 exploit chain
-* **GamerHack** — original hosting/project work
+* [**Aio Slopkit**](https://github.com/jordyidk/slopkit) — original PS4 exploit chain
+* [**GamerHack**](https://github.com/GamerHack/GamerHack.github.io) — original hosting/project work
 * ESP32 port — this project
